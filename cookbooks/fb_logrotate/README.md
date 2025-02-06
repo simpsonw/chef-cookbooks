@@ -18,7 +18,7 @@ Attributes
 * node['fb_logrotate']['add_locking_to_logrotate']
 * node['fb_logrotate']['debug_log']
 * node['fb_logrotate']['systemd_timer']
-* node['fb_logrotate']['timer_settings']
+* node['fb_logrotate']['systemd_settings']
 * node['fb_logrotate']['manage_packages']
 
 Usage
@@ -224,8 +224,8 @@ of CentOS6 and MAC OS X. It will remove the cronjob for logrotate
 adds low priority `nice` and `ionice` to the `logrotate` process. This can be
 very useful, but be aware you are removing a file from the system package.
 
-### timer_settings
-The node['fb_logrotate']['timer_settings'] contains configuration for the
+### systemd_settings
+The node['fb_logrotate']['systemd_settings'] contains configuration for the
 systemd timer and service units. It accepts the following:
 * OnCalendar - when and how often the logrotate should run. Default 'daily'
 * RandomizedDelaySec - Delay the timer by a randomly selected, evenly
